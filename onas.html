@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nás | Tvoja Kozmetika</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+        }
+
+        .nav-section {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .nav-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-section ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .nav-section ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-section ul li a:hover {
+            background-color: #ddd;
+        }
+
+        .hero-section {
+            background: url('images/kozmetika-hero.jpg') no-repeat center center/cover;
+            text-align: center;
+            padding: 60px 20px; 
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.6); 
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #333;
+            font-size: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .about-us {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: transparent; 
+            box-shadow: none; 
+        }
+
+        .about-us p {
+            font-size: 18px;
+            color: #333;
+            text-align: justify;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-section {
+            text-align: center;
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 1000px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .team-member {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .team-member h3 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-top: 10px;
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header></header>
+
+   
+    <div class="nav-section">
+        <ul>
+            <li><a href="index.html">Hlavná stránka</a></li>
+            <li><a href="produkty.html">Produkty</a></li>
+            <li><a href="kosik.html">Košík</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="onas.html">O nás</a></li>
+        </ul>
+    </div>
+
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>O nás</h1>
+            <p>Objavte príbeh našej spoločnosti a tím odborníkov, ktorí sa starajú o vašu krásu.</p>
+        </div>
+    </div>
+
+    
+    <section class="about-us">
+        <h2>O našej spoločnosti</h2>
+        <p>Spoločnosť Tvoja Kozmetika sa zameriava na poskytovanie kvalitnej kozmetiky, ktorá podporuje zdravie a krásu pleti. Naše produkty sú vyvíjané s dôrazom na efektívnosť, bezpečnosť a prírodné zložky.</p>
+        <p>V našom tíme sú skúsení odborníci, ktorí sledujú najnovšie trendy v oblasti kozmetiky, aby vám prinášali tie najlepšie produkty. Naša filozofia je založená na kvalite a udržateľnosti.</p>
+    </section>
+
+   
+    <section class="team-section">
+        <h2>Naši odborníci</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="images/Novakova.jpeg" alt="Jana Nováková" class="team-img">
+                <h3>Jana Nováková</h3>
+                <p>Odborník na pleťové poradenstvo</p>
+            </div>
+            <div class="team-member">
+                <img src="images/Kováčová.png" alt="Mária Kováčová" class="team-img">
+                <h3>Mária Kováčová</h3>
+                <p>Vývoj produktov a zloženie</p>
+            </div>
+            <div class="team-member">
+                <img src="images/horvath.jpeg" alt="Peter Horváth" class="team-img">
+                <h3>Peter Horváth</h3>
+                <p>Marketing a zákaznícky servis</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        
+    </footer>
+
+</body>
+
+</html>

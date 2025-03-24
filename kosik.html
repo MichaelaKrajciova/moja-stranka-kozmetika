@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Košík</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+
+        .cart-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-section h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .cart-item {
+            display: flex;
+            flex-direction: column;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 30%;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .cart-item:hover {
+            transform: scale(1.05);
+        }
+
+        .cart-item-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .cart-item-details {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .cart-item-title {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .cart-item-description {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .cart-item-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .cart-item-quantity {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .remove-item-btn {
+            background-color: #ff6347;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .remove-item-btn:hover {
+            background-color: #ff4500;
+        }
+
+        .cart-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .total-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .checkout-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .checkout-btn:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hlavná stránka</a></li>
+                <li><a href="produkty.html">Produkty</a></li>
+                <li><a href="kosik.html">Košík</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="onas.html">O nás</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cart-section">
+        <h1>Váš Košík</h1>
+        <div class="cart-items">
+            
+            <div class="cart-item">
+                <img src="images/kozmeticka-maska.webp" alt="Kozmetická maska" class="cart-item-image">
+                <div class="cart-item-details">
+                    <h3 class="cart-item-title">Kozmetická maska</h3>
+                    <p class="cart-item-description">Luxusná kozmetická maska pre krásnu pleť.</p>
+                    <div class="cart-item-price">29.99 €</div>
+                    <input type="number" class="cart-item-quantity" value="1" min="1">
+                </div>
+                <button class="remove-item-btn">Odstrániť</button>
+            </div>
+
+            
+            <div class="cart-item">
+                <img src="images/olej-na-vlasy.jpeg" alt="Olej na vlasy" class="cart-item-image">
+                <div class="cart-item-details">
+                    <h3 class="cart-item-title">Olej na vlasy</h3>
+                    <p class="cart-item-description">Výživný olej na vlasy pre lesk a hydratáciu.</p>
+                    <div class="cart-item-price">15.50 €</div>
+                    <input type="number" class="cart-item-quantity" value="1" min="1">
+                </div>
+                <button class="remove-item-btn">Odstrániť</button>
+            </div>
+
+            
+            <div class="cart-item">
+                <img src="images/sampon-na-vlasy.jpeg" alt="Šampón na vlasy" class="cart-item-image">
+                <div class="cart-item-details">
+                    <h3 class="cart-item-title">Šampón na vlasy</h3>
+                    <p class="cart-item-description">Šampón pre silné a zdravé vlasy.</p>
+                    <div class="cart-item-price">12.99 €</div>
+                    <input type="number" class="cart-item-quantity" value="1" min="1">
+                </div>
+                <button class="remove-item-btn">Odstrániť</button>
+            </div>
+
+            
+        </div>
+
+        <div class="cart-summary">
+            <p class="total-price">Celková cena: 58.48 €</p>
+            <button class="checkout-btn">Prejsť na platbu</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tvoja Kozmetika. Všetky práva vyhradené.</p>
+    </footer>
+
+    <script>
+        
+        function removeItemFromCart(event) {
+            
+            const cartItem = event.target.closest('.cart-item');
+            
+            
+            cartItem.remove();
+
+            
+            updateCartSummary();
+        }
+
+        
+        function updateCartSummary() {
+            const cartItems = document.querySelectorAll('.cart-item');
+            const totalElement = document.querySelector('.total-price');
+            let total = 0;
+
+            
+            cartItems.forEach(item => {
+                const priceElement = item.querySelector('.cart-item-price');
+                const price = parseFloat(priceElement.textContent.replace('€', '').trim());
+                const quantityElement = item.querySelector('.cart-item-quantity');
+                const quantity = parseInt(quantityElement.value);
+
+                total += price * quantity;
+            });
+
+            
+            totalElement.textContent = `Celková cena: ${total.toFixed(2)} €`;
+        }
+
+        
+        function updateQuantity(event) {
+            updateCartSummary();
+        }
+
+        
+        document.querySelectorAll('.remove-item-btn').forEach(button => {
+            button.addEventListener('click', removeItemFromCart);
+        });
+
+        
+        document.querySelectorAll('.cart-item-quantity').forEach(input => {
+            input.addEventListener('input', updateQuantity);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #f0f0f0; 
+            color: #333;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .navigation a {
+            color: #333; 
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .navigation a:hover {
+            background-color: #ddd; 
+        }
+
+        .hero-section {
+            background: url('images/kontakt-hero.jpg') no-repeat center center/cover;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.6); 
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .contact-info div {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .contact-info div h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .contact-info div p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .contact-form {
+            margin-top: 40px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            background-color: #333;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <header>
+        <div class="logo">
+            Tvoja Kozmetika
+        </div>
+        <div class="navigation">
+            <a href="index.html">Hlavná stránka</a>
+            <a href="produkty.html">Produkty</a>
+            <a href="kosik.html">Košík</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="onas.html">O nás</a>
+        </div>
+    </header>
+
+    
+    <div class="hero-section">
+        <div class="hero-overlay"></div> 
+        <div class="hero-content">
+            <h1>Kontaktujte nás</h1>
+            <p>Máte otázky alebo potrebujete viac informácií? Radi vám pomôžeme!</p>
+        </div>
+    </div>
+
+    
+    <div class="contact-section">
+        <h2>Naše Kontaktné Informácie</h2>
+        <div class="contact-info">
+            <div>
+                <h3>Adresa</h3>
+                <p>Hlavná 123, 010 01, Bratislava</p>
+            </div>
+            <div>
+                <h3>Email</h3>
+                <p>info@kozmetika.sk</p>
+            </div>
+            <div>
+                <h3>Telefón</h3>
+                <p>+421 123 456 789</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="contact-form">
+        <h2>Pošlite nám správu</h2>
+        <form action="submit_form.php" method="post">
+            <input type="text" name="name" placeholder="Vaše meno" required>
+            <input type="email" name="email" placeholder="Váš email" required>
+            <textarea name="message" rows="5" placeholder="Vaša správa" required></textarea>
+            <button type="submit">Odoslať správu</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

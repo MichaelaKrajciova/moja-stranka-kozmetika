@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkty</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            background-color: #fde4e4; 
+            background-image: url('images/kozmetika-background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        nav {
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: white; 
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffcccb; 
+        }
+
+        
+        .products-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.8); 
+            border-radius: 10px;
+            max-width: 1200px;
+            margin: 100px auto 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .products-section h1 {
+            font-size: 2.5rem;
+            color: #5a3e36;
+            margin-bottom: 20px;
+        }
+
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        
+        .product-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        
+        .product-card img {
+            width: 100%;
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        
+        .add-to-cart-btn {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #e55347;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hlavná stránka</a></li>
+                <li><a href="produkty.html">Produkty</a></li>
+                <li><a href="kosik.html">Košík</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="onas.html">O nás</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="products-section">
+        <h1>Naše produkty</h1>
+        <div class="product-grid">
+            
+            
+            <div class="product-card">
+                <img src="images/kozmeticka-maska.webp" alt="Kozmetická maska">
+                <h3>Kozmetická maska</h3>
+                <p>Luxusná maska pre žiarivú pleť.</p>
+                <p class="product-price">29.99 €</p>
+                <button class="add-to-cart-btn">Pridať do košíka</button>
+            </div>
+
+            
+            <div class="product-card">
+                <img src="images/olej-na-vlasy.jpeg" alt="Olej na vlasy">
+                <h3>Olej na vlasy</h3>
+                <p>Výživný olej pre zdravé vlasy.</p>
+                <p class="product-price">15.50 €</p>
+                <button class="add-to-cart-btn">Pridať do košíka</button>
+            </div>
+
+            
+            <div class="product-card">
+                <img src="images/sampon-na-vlasy.jpeg" alt="Šampón na vlasy">
+                <h3>Šampón na vlasy</h3>
+                <p>Šampón pre silné a lesklé vlasy.</p>
+                <p class="product-price">12.99 €</p>
+                <button class="add-to-cart-btn">Pridať do košíka</button>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tvoja Kozmetika. Všetky práva vyhradené.</p>
+    </footer>
+</body>
+
+</html>
